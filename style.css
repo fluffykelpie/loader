@@ -15,8 +15,127 @@ body {
   height: 100%;
 }
 
+@keyframes rotate {
+  from {
+    opacity: 1;
+    filter: hue-rotate(360deg);
+    transform: scale(0.3);
+  }
+  to {
+    filter: hue-rotate(0deg);
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+@keyframes rotating {
+  from {
+    filter: hue-rotate(360deg);
+    transform: scale(1);
+    opacity: 0;
+  }
+  to {
+    filter: hue-rotate(0deg);
+    transform: scale(0.3);
+    opacity: 1;
+  }
+}
+@keyframes rotated {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
 html {
-  background: #bee4eb;
+  background: #f2faf2;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: #a7718f91;
+  height: 75%;
+  width: 75%;
+  display: grid;
+  grid-gap: 5px;
+  grid-template: auto/repeat(4, 1fr);
+  grid-template-areas: "a b c d" "e f g h" "i j k l";
+  border: 5px solid #9C6E88;
+  animation: rotated 10s ease-in-out infinite;
+}
+
+.square-big {
+  background: #a8c7a6cc;
+  width: 100%;
+  height: 100%;
+}
+
+.square-big:nth-child(1) {
+  animation: rotate 3s ease-in-out infinite;
+  grid-area: a;
+}
+
+.square-big:nth-child(2) {
+  grid-area: b;
+  animation: rotating 3s ease-in-out infinite;
+}
+
+.square-big:nth-child(3) {
+  grid-area: c;
+  animation: rotate 3s ease-in-out infinite;
+}
+
+.square-big:nth-child(4) {
+  grid-area: d;
+  animation: rotating 3s ease-in-out infinite;
+}
+
+.square-big:nth-child(5) {
+  grid-area: e;
+  animation: rotating 3s ease-in-out infinite;
+}
+
+.square-big:nth-child(6) {
+  grid-area: f;
+  animation: rotate 3s ease-in-out infinite;
+}
+
+.square-big:nth-child(7) {
+  grid-area: g;
+  animation: rotating 3s ease-in-out infinite;
+}
+
+.square-big:nth-child(8) {
+  grid-area: h;
+  animation: rotate 3s ease-in-out infinite;
+}
+
+.square-big:nth-child(9) {
+  grid-area: i;
+  animation: rotate 3s ease-in-out infinite;
+}
+
+.square-big:nth-child(10) {
+  grid-area: j;
+  animation: rotating 3s ease-in-out infinite;
+}
+
+.square-big:nth-child(11) {
+  grid-area: k;
+  animation: rotate 3s ease-in-out infinite;
+}
+
+.square-big:nth-child(12) {
+  grid-area: l;
+  animation: rotating 3s ease-in-out infinite;
 }
 
 /*# sourceMappingURL=style.css.map */
